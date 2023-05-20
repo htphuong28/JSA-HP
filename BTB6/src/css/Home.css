@@ -1,0 +1,454 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    /* font-family: 'Montserrat', sans-serif; */
+    /* font-family: 'Merriweather', serif; */
+}
+
+#container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    top:0;
+    z-index: 100000;
+    background-color: #fff;
+}
+
+.menu ul {
+    list-style: none;
+    width: 480px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu ul li a {
+    color: black;
+    padding: 5px 10px;
+    background-image: linear-gradient(white, white 90%, #0081C9, #0081C9 10%);
+    background-size: 100% 110%;
+    transition: 0.25s;
+}
+
+.menu ul li a:hover {
+    background-position: 100% 100%;
+    color: grey;
+}
+.menu ul li.active a {
+    color: #fff;
+}
+a:-webkit-any-link:active {
+    color: yellow !important;
+}
+a {
+    color: black;
+}
+
+.menu img{
+    width: 200px;
+    height: 60px;
+}
+
+.sign button {
+    border: none;
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+    margin: 0 5px 0 0;
+}
+
+.signup {
+    background-image: linear-gradient(#19376D, #19376D 50%, beige, beige 50%);
+    background-size: 100% 200%;
+    transition: 1s;
+    color: white;
+}
+
+.signin {
+    background-image: linear-gradient(beige, beige 50%, #19376D, #19376D 50%);
+    background-size: 100% 200%;
+    transition: 1s;
+}
+
+
+.signup:hover {
+    background-position: 100% 100%;
+    color: black;
+}
+
+.signin:hover {
+    background-position: 100% 100%;
+    color: white;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    height: 800px;
+}
+
+.banner img {
+    position: absolute;
+    width: 100%;
+    height: 800px;
+}
+
+.bannertext{
+    position: relative;
+    margin: auto 70px;
+    padding: 40px;
+    background-image: linear-gradient(to right, white, rgba(255, 255, 255, 0));
+}
+
+h1 {
+    font-size: 100px;
+}
+
+.bannertext p {
+    margin: 20px auto 0 0;
+    width: 600px;
+    
+}
+
+.bannertext button {
+    margin: 20px auto;
+    width: 120px;
+    height: 40px;
+    border: 0px;
+    font-weight: 600;
+    transition: 0.3s;
+    background-color: #ffffff56;
+    border-radius: 10px;
+}
+
+.bannertext button:hover{
+    background-color: yellow;
+    color: grey;
+}
+
+
+
+.tieude {
+    margin: 60px auto;
+}
+
+.tieude h2 {
+    text-align: center;
+    margin: 30px;
+    font-size: 30px;
+}
+
+.tieude p {
+    width: 1000px;
+    margin: 30px auto;
+    font-size: 20px;
+}
+
+
+.solieu {
+    display: grid;
+    grid-template-columns: repeat(2,700px);
+    justify-content: space-between;
+    margin: 50px;
+    gap: 0px;
+}
+
+.solieu h3 {
+    width: 600px;
+    margin: auto;
+}
+
+.solieu img {
+    width: 700px;
+    margin-bottom: 10px;
+}
+
+.body2 {
+    text-align: center;
+    align-items: center;
+    background-color: #00337C;
+    padding: 50px 0;
+}
+
+.tieude2 {
+    color: white;
+}
+
+.tinhnang {
+    text-align: center;
+    width: 1200px;
+    margin: 0 auto;
+    border-radius: 30px;
+}
+
+.tinhnangcon {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+}
+
+.tinhnangtext {
+    text-align: center;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.tinhnangimg {
+    height: 400px;
+    overflow: hidden;
+}
+
+.tinhnangimg img {
+    width: 600px;
+    transition: transform 2s, filter 1.5s ease-in-out;
+    transform-origin: center center;
+    filter: brightness(50%);
+}
+
+.tinhnangimg:hover img {
+    filter: brightness(100%);
+    transform: scale(1.3);
+}
+
+.tinhnangimg {
+    height: 400px;
+}
+
+.goctrentrai{
+    border-top-left-radius: 30px;
+}
+
+.goctrenphai {
+    border-top-right-radius: 30px;
+}
+
+.gocduoiphai {
+    border-bottom-right-radius: 30px;
+}
+
+.gocduoitrai {
+    border-bottom-left-radius: 30px;
+}
+
+.body3 {
+    text-align: center;
+}
+.body3 input {
+    border-radius: 25px;
+    width: 600px;
+    height: 40px;
+    text-align: center;
+}
+.tracuu {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0 420px;
+}
+.body3 span {
+    margin-left: -50px;
+}
+
+.kq {
+    display: block;
+    position: absolute;
+    z-index: 100;
+    background-color: white;
+
+}
+.kq li {
+    display: flex;
+    align-items: center;
+    width: 600px;
+}
+.kq img {
+    width: 50px;
+    height: 50px;
+}
+
+.closesearch {
+    display: none;
+}
+
+.closesearch {
+    margin-left: -60px;
+    width: 30px;
+    opacity: 80%;
+}
+
+.loatmau {
+    display: flex;
+    margin: 40px auto 0;
+}
+
+.mau {
+    position: relative;
+    color: #fff;
+}
+
+.mau img {
+    width: 100%;
+    height: 100%;
+}
+
+.imgtext {
+    position: absolute;
+    bottom: 0px;
+    padding: 20px 0;
+    background-color: #00347c6c;
+    text-align: center;
+    width: 100%;
+    transition: ease-in 2s;
+}
+
+.imgtext p{
+    display: none;
+}
+
+.imgtext:hover p{
+    display: block;
+}
+
+.imgtext h3 a, .imgtext p a{
+
+    color: #fff;
+}
+.arrow {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.body4 {
+    background-color: #619196;
+    padding: 20px 0;
+    
+}
+
+.body4 h2 {
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    margin: 50px;
+    
+}
+
+.news1 {
+    display: flex;
+    align-items: center;
+    padding: 0 300px;
+}
+
+.news1image img{
+    width: 500px;
+}
+
+.news1text {
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    margin-left: -30px;
+}
+
+.newsremain {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 120px;
+}
+
+.news2 {
+    display: flex;
+
+    width: 300px;
+}
+
+.news2text {
+    padding: 20px;
+    width: 100%;
+    background-color: #fff;
+    font-size: 15px;
+}
+
+.news2image img {
+    height: 100%;
+    width: 90px;
+}
+
+.body4 h3 {
+    margin: 10px;
+    font-size: 20px;
+}
+
+.body5 {
+    padding: 50px;
+    text-align: center;
+    background-image: url("../../img/tinhnang3.jpg");
+}
+
+.body5text {
+    background-color: rgba(255, 255, 255, 0.405);
+    width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.body5text h2 {
+    font-size: 40px;
+}
+
+.body5text p {
+    margin: 40px;
+    font-size: 20px;
+}
+
+.body5text button {
+    height: 50px;
+    width: 100px;
+    border-radius: 20px;
+    font-size: 15px;
+    border: none;
+    background-image: linear-gradient(#19376D, #19376D 50%, beige, beige 50%);
+    background-size: 100% 200%;
+    transition: 1s;
+    color: white;
+}
+
+.body5text :hover {
+    background-position: 100% 100%;
+    color: black;
+}
+
+.footer h3 {
+    margin: 60px;
+}
+
+.footercontent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 150px 20px;
+}
+
+.footercontentcon {
+    margin: 10px 30px;
+}
+
+.footertext {
+    display: flex;
+    align-items: center;
+    width: 500px;
+    margin: 20px auto;
+}
+
+.footertext img {
+    width: 35px;
+    margin-right: 10px;
+}
