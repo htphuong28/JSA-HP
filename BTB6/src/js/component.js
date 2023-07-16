@@ -5,7 +5,7 @@ function showHeader (vitri) {
                 <img src="img/Logotamthoi.png" alt=""><a href="logo" class="logo"></a></img>
                 <ul class="navigate">
                     <li><a href="Home.html">Home</a></li>
-                    <li><a href="">Learning with me</a></li>
+                    <li><a href="learn.html">Course</a></li>
                     <li><a href="dictionary.html">Dictionary</a></li>
                     <li><a href="bloglanding.html">My blog</a></li>
                     <li><a href="aboutme.html">About me</a></li>
