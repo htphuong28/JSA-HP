@@ -12,7 +12,7 @@ function showHeader (vitri) {
     
                 </ul>
                 <div class="sign">
-                <a href=""><button class="signup" >Đăng ký</button></a>
+                <a href="signup.html"><button class="signup" >Đăng ký</button></a>
                 <a href="form.html"><button class="signin">Đăng nhập</button></a>
                 </div>
             </div>`

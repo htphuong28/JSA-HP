@@ -25,10 +25,11 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.course-image {
+.course-image-section {
     width: 230px;
     text-align: center;
 }
+
 
 .img {
     width: 100%;

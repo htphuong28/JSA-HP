@@ -1,5 +1,19 @@
 .course-info{
-    padding: 36px 15px;
+    padding: 36px 60px;
     background-color: #19376D;
     color: white;
 }
+
+.progress-bar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: 
+      radial-gradient(closest-side, white 79%, transparent 80% 100%),
+      conic-gradient(hotpink 75%, pink 0);    
+}
+
+.course-content {
+    margin: 30px 80px;
+}
+
