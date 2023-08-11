@@ -1,24 +1,28 @@
-const arrLogin = [
-    {
-        tk: "ABC",
-        mk: 123,
-        role: 0,
-    }
-]
+let arrLogin = JSON.parse(localStorage.getItem("userInfo"))
+console.log(arrLogin)
+let tk = document.querySelector("#tk");
+let mk = document.querySelector("#mk");
 
+function login(e) {
 
-function login() {
-    let tk = document.querySelector("#tk");
-    let mk = document.querySelector("#mk");
+    if(tk.value.trim().length==0 || mk.value.trim().length==0) alert("Vui lòng nhập email hoặc mật khẩu")
+
     let d=true;
-    for(let item of arrLogin) {
-        if(tk.value==item.tk && mk.value==item.mk) {
-            window.location="Home.html"
-            return d=true;
-        } else  {d=false};
 
-    }
+    var indexArr = arrLogin.map(e => e.name).indexOf(tk.value)
+    console.log(indexArr)
+
+    if(indexArr>=0 && (arrLogin[indexArr].password == mk.value)) {location.replace("Home.html")}
+    else alert("Sai tài khoản hoặc mật khẩu");
+
     if(d==false) {alert("Sai tài khoản hoặc mật khẩu")}
 }
 
 //return trả 1 giá trị 
+
+function showpass() {
+
+    if(mk.type === "password") {
+        mk.type = "text"
+    } else mk.type = "password"
+}

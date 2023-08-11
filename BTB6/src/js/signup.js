@@ -25,36 +25,36 @@ let numbers = /[0-9]/g
 
 function submitInfo() {
     console.log('click')
-    let userInfo = {
-        email: email.value.trim(),
-        name: username.value.trim(),
-        password: password.value.trim(),
-        rpassword: rpassword.value.trim()
-    }
 
-    if(userInfo.email.length == 0 || userInfo.name.length == 0 || userInfo.password.length==0 || userInfo.rpassword.length==0) {alert("Vui long nhap day du thong tin")}
+    if(email.value.trim().length == 0 || username.value.trim().length == 0 || password.value.trim().length==0 || rpassword.value.trim().length==0) {alert("Vui long nhap day du thong tin")}
     
-    else if (userInfo.password != userInfo.rpassword) {alert("Mat khau khong khop. Vui long nhap lai.")}
+    else if (password.value.trim() != rpassword.value.trim()) {alert("Mat khau khong khop. Vui long nhap lai.")}
 
-    else if (userInfo.password.length <8) {alert("Mat khau phai co it nhat 8 ky tu")}
+    else if (password.value.trim().length <8) {alert("Mat khau phai co it nhat 8 ky tu")}
 
-    else if (!userInfo.password.match(lowerCaseLetter)) {alert("Mat khau phai co it nhat mot ky tu in thuong")}
+    else if (!password.value.trim().match(lowerCaseLetter)) {alert("Mat khau phai co it nhat mot ky tu in thuong")}
 
-    else if(!userInfo.password.match(upperCaseLetter)) {alert("Mat khau phai co it nhat mot ky tu in hoa")}
+    else if(!password.value.trim().match(upperCaseLetter)) {alert("Mat khau phai co it nhat mot ky tu in hoa")}
     
-    else if(!userInfo.password.match(numbers)) {alert("Mat khau phai co it nhat mot chu so")}
+    else if(!password.value.trim().match(numbers)) {alert("Mat khau phai co it nhat mot chu so")}
 
     else {
         if(localStorage.userInfo) {
             let userInfo = JSON.parse(localStorage.userInfo)
-            users.push(userInfo)
-            localStorage.setItem("users", JSON.stringify(users))
+            userInfo.push({
+                email: email.value.trim(),
+                name: username.value.trim(),
+                password: password.value.trim()
+        })
+            localStorage.setItem("userInfo", JSON.stringify(userInfo))
         } else {
-            localStorage.setItem("users",
+            localStorage.setItem("userInfo",
             JSON.stringify(
-            [
-                userInfo
-            ]));
+            [{
+                email: email.value.trim(),
+                name: username.value.trim(),
+                password: password.value.trim()
+        }]));
         }
         location.replace("Home.html")
     }
