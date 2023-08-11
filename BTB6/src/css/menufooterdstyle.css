@@ -63,6 +63,7 @@ a {
     height: 30px;
     border-radius: 10px;
     margin: 0 5px 0 0;
+    cursor: pointer;
 }
 
 .signup {

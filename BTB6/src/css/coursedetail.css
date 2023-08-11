@@ -1,19 +1,75 @@
+#container {
+    background-color: #f7f7fc;
+}
+
+
+
 .course-info{
     padding: 36px 60px;
     background-color: #19376D;
     color: white;
+    display: flex;
 }
 
-.progress-bar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: 
-      radial-gradient(closest-side, white 79%, transparent 80% 100%),
-      conic-gradient(hotpink 75%, pink 0);    
+.course-info-text {
+    margin: 0 30px;
+    text-align: justify;
+}
+
+.getstartedbt {
+    width: 150px;
+    height: 25px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
 }
 
 .course-content {
     margin: 30px 80px;
 }
 
+.chapter {
+    border: #19376D 1px solid;
+    border-radius: 10px;
+    padding: 15px 30px;
+    transition: box-shadow 0.5s ease-in-out;
+    background-color: #fff;
+}
+
+.chapter:hover {
+    box-shadow: 7px 7px 5px #19366dbb;
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+.dropdownbt{
+    width: 150px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #19376D;
+    color: #fff;
+    margin: 15px 0;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.dropdownbt:hover {
+    color: #05193d;
+    background-color: antiquewhite;
+    transition: all 0.5s ease-in-out;
+}
+
+.chapter-lesson-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.chapter-lesson {
+    display: none;
+    position: absolute;
+}
+
+.chapter-lesson-show{
+    display: block;
+}
