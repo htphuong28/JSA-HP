@@ -2,45 +2,54 @@ let loatmau=document.querySelector(".loatmau");
 
 let arrList = [
     {
-        id: 1,
+        id: "xinchao",
         Name: "Xin chào",
         Description: "Make a flat base with your non-dominant hand.  Put your dominant hand flat above it.  Raise your dominant hand in a half-circling motion above the non-dominant hand, ending up around your mouth area.  The half-circling motion looks like waxing a car or cleaning a table.",
         Image: "img/stock1.jpg",
         Usage: "We mainly use above when we point to objects that are placed above each other, such as wooden blocks. We also use it when we describe a hat as being above someone's head.",
     },
     {
-        id: 2,
+        id: "tambiet",
         Name: "Tạm biệt",
         Description: "Make a flat base with your non-dominant hand.  Put your dominant hand flat above it.  Raise your dominant hand in a half-circling motion above the non-dominant hand, ending up around your mouth area.  The half-circling motion looks like waxing a car or cleaning a table.",
         Image: "img/stock2.jpg",
         Usage: "We mainly use above when we point to objects that are placed above each other, such as wooden blocks. We also use it when we describe a hat as being above someone's head.",
     },
     {
-        id: 3,
+        id: "an",
         Name: "Ăn",
         Description: "Make a flat base with your non-dominant hand.  Put your dominant hand flat above it.  Raise your dominant hand in a half-circling motion above the non-dominant hand, ending up around your mouth area.  The half-circling motion looks like waxing a car or cleaning a table.",
         Image: "img/stock3.jpg",
         Usage: "We mainly use above when we point to objects that are placed above each other, such as wooden blocks. We also use it when we describe a hat as being above someone's head.",
     },
     {
-        id: 4,
+        id: "uong",
         Name: "Uống",
         Description: "Make a flat base with your non-dominant hand.  Put your dominant hand flat above it.  Raise your dominant hand in a half-circling motion above the non-dominant hand, ending up around your mouth area.  The half-circling motion looks like waxing a car or cleaning a table.",
         Image: "img/stock4.jpg",
         Usage: "We mainly use above when we point to objects that are placed above each other, such as wooden blocks. We also use it when we describe a hat as being above someone's head.",
     },
+    {
+        id: "ungho",
+        Name: "Ủng hộ",
+        Description: "Make a flat base with your non-dominant hand.  Put your dominant hand flat above it.  Raise your dominant hand in a half-circling motion above the non-dominant hand, ending up around your mouth area.  The half-circling motion looks like waxing a car or cleaning a table.",
+        Image: "img/stock1.jpg",
+        Usage: "We mainly use above when we point to objects that are placed above each other, such as wooden blocks. We also use it when we describe a hat as being above someone's head.",
+    },
 
 ]
 
+localStorage.setItem("termList", JSON.stringify(arrList))
+
 function render (array, placeholder) {
     if (placeholder) {
-        for(let item of array) {
+        for(var item=0; item<4; item++) {
             placeholder.innerHTML += `
             <div class="mau">
-                <img src="${item.Image}" alt="">
+                <img src="${array[item].Image}" alt="">
                 <div class="imgtext">
-                    <h3><a href="detail.code.html?id=${item.id}">"${item.Name}"</a></h3>
-                    <p><a href="detail.code.html?id=${item.id}">${item.Description}</a></p>
+                    <h3><a href="detail.code.html?id=${array[item].id}">"${array[item].Name}"</a></h3>
+                    <p><a href="detail.code.html?id=${array[item].id}">${array[item].Description}</a></p>
                 </div>  
             </div>
             `

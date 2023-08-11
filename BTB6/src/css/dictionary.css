@@ -15,3 +15,22 @@
     height: 40px;
     border-radius: 20px;
 }
+
+.letter-section {
+    display: flex;
+}
+
+.letter {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.term {
+    display: flex;
+    align-items: center;
+}
+
+.term img {
+    width: 200px;
+}
+
