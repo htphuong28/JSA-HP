@@ -17,7 +17,6 @@
 }
 
 .course {
-    display: flex;
     padding: 30px;
     border: 0.1px;
     width: 253px;

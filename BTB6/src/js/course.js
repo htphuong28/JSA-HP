@@ -5,6 +5,7 @@ let courseList = [
         description: "Description is put here",
         status: 1,
         progress: 60,
+        link: "coursedetail.html"
     },
     {
         img: "img/stock1.jpg",
@@ -41,7 +42,8 @@ for(let i of courseList) {
                 <p class="course-description">${i.description}</p>
             </div>
             <div class="course-individual-info">
-                <button class="course-action-status">${i.status==1?"Continue":"Start"}</button>
+                <a href="${i.link}"><button class="course-action-status">${i.status==1?"Continue":"Start"}</button></a>
+                
                 <progress value="${i.progress}" max="100" class="course-progress"></progress>
             </div>
         
