@@ -55,17 +55,21 @@ let arrBlog = [
     }
 ]
 
-function render () {
-    let news = document.querySelector(".newsremain");
-    if(news) {
-        for(let item of arrBlog) {
+localStorage.setItem("arrBlog", JSON.stringify(arrBlog))
+
+let news = document.querySelector(".newsremain");
+
+function render (placeholder) {
+    
+    if(placeholder) {
+        for(let i=0; i<3; i++) {
             news.innerHTML += `
             <div class="news2">
                 <div class="news2image">
-                    <img src="${item.banner}" alt="">
+                    <img src="${arrBlog[i].banner}" alt="">
                 </div>
                 <div class="news2text">
-                    <h3><a href="blog.html?id=${item.id}">${item.title}</a></h3>
+                    <h3><a href="blog.html?id=${arrBlog[i].id}">${arrBlog[i].title}</a></h3>
                 </div>
             </div>`
         }
@@ -73,9 +77,29 @@ function render () {
     }
 }
 
-render();
+render(news);
 
-
+function renderBlogLanding(placeholder) {
+    if(placeholder) {
+        for(let i=0; i<3; i++) {
+            placeholder.innerHTML+= `
+                    <div class="body1nhocon">
+                        <div class="imghoverzoom imgbody1nhocon">
+                            <img src=${arrBlog[i].banner} alt="">
+                        </div>
+                        
+                        <div class="body1nhocontext">
+                            <a href="blog.html?id=${arrBlog[i].id}">
+                                <p class="tag">${arrBlog[i].category}</p>
+                                <h2>${arrBlog[i].title}</h2>
+                            </a>
+                        </div>
+                    </div>`
+        }
+    }
+}
+let body1nho = document.querySelector(".body1nho")
+renderBlogLanding(body1nho)
 
 function showBlog() {
     let id = new URLSearchParams(window.location.search).get("id");

@@ -6,7 +6,7 @@ let arrList = [
         Name: "Xin chào",
         Description: "Make a flat base with your non-dominant hand.  Put your dominant hand flat above it.  Raise your dominant hand in a half-circling motion above the non-dominant hand, ending up around your mouth area.  The half-circling motion looks like waxing a car or cleaning a table.",
         Image: "img/stock1.jpg",
-        Usage: "We mainly use above when we point to objects that are placed above each other, such as wooden blocks. We also use it when we describe a hat as being above someone's head.",
+        Usage: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
     },
     {
         id: "tambiet",
@@ -49,7 +49,7 @@ function render (array, placeholder) {
                 <img src="${array[item].Image}" alt="">
                 <div class="imgtext">
                     <h3><a href="detail.code.html?id=${array[item].id}">"${array[item].Name}"</a></h3>
-                    <p><a href="detail.code.html?id=${array[item].id}">${array[item].Description}</a></p>
+                    <p class="term-description"><a href="detail.code.html?id=${array[item].id}">${array[item].Description}</a></p>
                 </div>  
             </div>
             `
@@ -73,6 +73,11 @@ function showDetail () {
         <div class="text1">
             <h1>${newProduct.Name}</h1>
             <p>${newProduct.Description}</p>
+            <div class="text2">
+                    
+                        <h2>Cách sử dụng</h2>
+                        <p>${newProduct.Usage}</p>
+                    </div>
         </div>
                 
         <img src="${newProduct.Image}" alt="">`
@@ -135,6 +140,7 @@ let index = 0;
 
 setInterval(function () {
     let banner = document.querySelector(".banner")
+    if(banner) {
     //kiểm tra xem index có quá giới hạn mảng không -> quay lại
     if(index>=arrBanner.length) index=0;
     //kiểm tra xem index có nhỏ hơn 0 không -> quay lại
@@ -146,7 +152,7 @@ setInterval(function () {
             <p>${arrBanner[index].content}</p>
             <button>LEARN MORE</button>
         </div>`,
-        index++},
+        index++}},
     5000)
 
 const arrListSumenh = [
@@ -172,6 +178,7 @@ let indexb = 1;
 
 setInterval(function() {
     let sumenh = document.querySelector(".solieu");
+    if(sumenh) {
     if (indexa>=arrListSumenh.length) indexa=0;
     if (indexb>=arrListSumenh.length) indexb=0;
 
@@ -185,7 +192,7 @@ setInterval(function() {
         <h3>${arrListSumenh[indexb].text}</h3>
     </div>`
     indexa++;
-    indexb++
+    indexb++}
 },5000)
 
 

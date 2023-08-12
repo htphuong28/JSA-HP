@@ -78,7 +78,23 @@ function renderCourseContent(placeholder) {
     if(placeholder) {
         for(let item of courseContent.chapter) {
             placeholder.innerHTML+= `
-            `
+                        <div class="chapter">
+                            <div class="chapter-info">
+                                <h2>Chapter 1</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Elementum nibh tellus molestie nunc non blandit massa enim nec.</p>
+                            </div>
+                            
+                            <div class="chapter-lesson-dropdown">
+                                <button class="dropdownbt" onclick="dropdownFunc()">Show lessons</button>
+                                <div class="chapter-lesson">
+                                    <li><a href="">Lesson 1</a></li>
+                                    <li><a href="">Lesson 2</a></li>
+                                    <li><a href="">Lesson 3</a></li>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>`
         }
     }
 }
