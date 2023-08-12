@@ -13,34 +13,40 @@
     <div id="container">
         <div class="menu"></div>
         <div class="body">
-            <form action="">
-                <div id="form">
-                    <h1>Sign Up</h1>
-                    <div class="input-container">
-                            <div class="input">
-                                <p>Email</p>
-                                <input type="email" name="email" id="email">
-                            </div>
-                            <div class="input">
-                                <p>User name</p>
-                                <input type="text" name="username" id="username">
-                            </div>
-                            <div class="input">
-                                <p>Enter password</p>
-                                <input type="password" name="password" id="password">
-                            </div>
-                            <div class="input">
-                                <p>Re-enter password</p>
-                                <input type="password" name="re-password" id="re-password">
-                            </div>
+            <div class="form-container">
+                <form action="">
+                    <div id="form">
+                        <h1>Sign Up</h1>
+                        <div class="input-container">
+                                <div class="input">
+                                    <p>Email</p>
+                                    <input type="email" name="email" id="email">
+                                </div>
+                                <div class="input">
+                                    <p>User name</p>
+                                    <input type="text" name="username" id="username">
+                                </div>
+                                <div class="input">
+                                    <p>Enter password</p>
+                                    <input type="password" name="password" id="password">
+                                </div>
+                                <div class="input">
+                                    <p>Re-enter password</p>
+                                    <input type="password" name="re-password" id="re-password">
+                                </div>
+                        </div>
+                          
+                        
                     </div>
-                      
-                    
-                </div>
-            </form>
-            <button class="sign-up-button" type="submit" onclick="submitInfo()">Sign Up</button>
+                </form>
+                <div class="form-action">
+                    <button class="sign-up-button" type="submit" onclick="submitInfo()">Sign Up</button>
                     <span>Already have an account?</span>
                     <a href="form.html" class="log-in">Log In</a>
+                </div>
+            </div>
+            
+            
         </div>
         
     </div>
