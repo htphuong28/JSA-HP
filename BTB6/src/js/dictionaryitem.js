@@ -22,8 +22,10 @@ function renderTerm(position) {
                     position.innerHTML += `
                         
                             <div class="term">
+                                <a href="detail.code.html?id=${listTermGroups[letter][i].id}">
                                 <img src="${listTermGroups[letter][i].Image}" alt="">
                                 <span>${listTermGroups[letter][i].Name}</span>
+                                </a>
                             </div>`
                         }
         position.innerHTML+=`</div>`
