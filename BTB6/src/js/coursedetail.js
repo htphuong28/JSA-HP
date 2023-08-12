@@ -47,11 +47,6 @@ let courseContent = {
 }
 
 
-function dropdownFunc(dropdownsection) {
-    console.log(dropdownsection)
-    document.getElementsByClassName(dropdownsection).classList.toggle("chapter-lesson-show")
-    
-}
 
 function renderCourseDetail(placeholder) {
     if(placeholder) {
