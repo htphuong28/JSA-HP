@@ -78,6 +78,7 @@ img:hover {
 
 .body1nhocon img{
     width: 180px;
+    object-fit: cover;
 }
 
 .body2 {

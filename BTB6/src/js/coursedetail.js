@@ -27,11 +27,8 @@ let courseContent = {
         },
         {
             name: "các chữ số",
+            description: "Hãy học những từ vựng hàng ngày đầu tiên: chào hỏi",
             lessonlist: [
-                {
-                    type: "video",
-                    display: "link",
-                },
                 {
                     type: "theory",
                     display: "Paragraph",
@@ -50,8 +47,10 @@ let courseContent = {
 }
 
 
-function dropdownFunc() {
-    document.querySelector(".chapter-lesson").classList.toggle("chapter-lesson-show")
+function dropdownFunc(dropdownsection) {
+    console.log(dropdownsection)
+    document.getElementsByClassName(dropdownsection).classList.toggle("chapter-lesson-show")
+    
 }
 
 function renderCourseDetail(placeholder) {
@@ -76,29 +75,49 @@ function renderCourseDetail(placeholder) {
 
 function renderCourseContent(placeholder) {
     if(placeholder) {
-        for(let item of courseContent.chapter) {
+        for(let item = 0; item< courseContent.chapter.length; item++) {
             placeholder.innerHTML+= `
-                        <div class="chapter">
+            <div class="chapter">
                             <div class="chapter-info">
-                                <h2>Chapter 1</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Elementum nibh tellus molestie nunc non blandit massa enim nec.</p>
+                                <h2>${courseContent.chapter[item].name}</h2>
+                                <p>${courseContent.chapter[item].description}</p>
                             </div>
                             
                             <div class="chapter-lesson-dropdown">
-                                <button class="dropdownbt" onclick="dropdownFunc()">Show lessons</button>
+                                <button class="dropdownbt">Show lessons</button>
                                 <div class="chapter-lesson">
-                                    <li><a href="">Lesson 1</a></li>
-                                    <li><a href="">Lesson 2</a></li>
-                                    <li><a href="">Lesson 3</a></li>
+                                    
                                 </div>
                                 
                             </div>
                             
                         </div>`
+            let chapterLesson = document.getElementsByClassName("chapter-lesson")
+
+            for(let i=0; i<courseContent.chapter[item].lessonlist.length;i++) {
+                chapterLesson[item].innerHTML+= `<li><a href="">Lesson ${i+1}</a></li>`
+            }
+            
+            let dropdownbt = document.getElementsByClassName("dropdownbt")
+            console.log(dropdownbt[item])
+            for(let j=0; j<dropdownbt.length;j++) {
+                dropdownbt[j].onclick = function() {
+                    chapterLesson[j].classList.toggle("chapter-lesson-show")
+                }
+            }
+            
         }
+        
+            
+
+                        
     }
 }
 
+let courseContentContain = document.querySelector(".course-content-contain")
+
+renderCourseContent(courseContentContain)
+courseContentContain.classList
 let courseInfo = document.querySelector(".course-info")
 
 renderCourseDetail(courseInfo)
