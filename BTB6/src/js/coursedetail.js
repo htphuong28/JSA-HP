@@ -145,8 +145,12 @@ function renderCourseContent(placeholder) {
                             
                             <div class="chapter-lesson-dropdown">
                                 <button class="dropdownbt">Show lessons</button>
-                                <div class="chapter-lesson">
-                                    
+                                <div style='background-color:white'>
+                                    <ul class="chapter-lesson" 
+                                    background-color: white;
+                                ">
+
+                                    </ul>
                                 </div>
                                 
                             </div>
