@@ -159,7 +159,7 @@ function renderCourseContent(placeholder) {
             let chapterLesson = document.getElementsByClassName("chapter-lesson")
 
             for(let i=0; i<courseContent.chapter[item].lessonlist.length;i++) {
-                chapterLesson[item].innerHTML+= `<li><a href="">Lesson ${i+1}</a></li>`
+                chapterLesson[item].innerHTML+= `<li style="text-decoration: none;"><a href="">Lesson ${i+1}</a></li>`
             }
             
             let dropdownbt = document.getElementsByClassName("dropdownbt")

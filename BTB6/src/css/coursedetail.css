@@ -73,8 +73,8 @@
 
 .chapter-lesson-show{
     display: block;
-    text-decoration: none;
+    list-style: none;
 }
 .chapter-lesson li{
-    text-decoration: none;
+    list-style: none;
 }

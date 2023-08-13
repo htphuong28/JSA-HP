@@ -38,7 +38,7 @@ function showFooter (vitri) {
                         <p><a href="https://www.facebook.com/hathieu.phuong.7/">Ha Thieu Phuong</a></p>
                     </div>
                 </div>
-               <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Ftouchsignproject.feelyourheart%2Fposts%2Fpfbid02Tz7EmqarLzrBpzdeE4fshJX279cxuVzT91wgqS7pMeFoZCmJG5uXjDpwkPaH7Jbdl&show_text=true&width=500" width="500" height="350" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/uyKx9eHpI1k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>`
     }
 }
