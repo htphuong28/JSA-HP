@@ -34,3 +34,11 @@ function renderTerm(position) {
 }
 
 renderTerm(displayTerm)
+
+let findform = document.querySelector(".find-form")
+let wordfind = document.querySelector(".search-box-input")
+
+// function submitFunc() {
+//     for(let item of )
+//     console.log(wordfind.value)
+// }
