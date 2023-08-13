@@ -39,6 +39,8 @@ function submitInfo() {
     else if(!password.value.trim().match(numbers)) {alert("Mat khau phai co it nhat mot chu so")}
 
     else {
+        alert("Dang ki thanh cong")
+
         if(localStorage.userInfo) {
             let userInfo = JSON.parse(localStorage.userInfo)
             userInfo.push({
@@ -55,6 +57,7 @@ function submitInfo() {
                 name: username.value.trim(),
                 password: password.value.trim()
         }]));
+        alert("Dang ki thanh cong")
         }
         location.replace("Home.html")
     }
